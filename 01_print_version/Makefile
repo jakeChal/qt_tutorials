@@ -11,14 +11,14 @@ SRC       := $(wildcard *.cpp)
 OBJS 	  := $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 INC_DIRS  := /usr/local/qt5/include/QtCore \
-			/usr/local/qt5/include
+			 /usr/local/qt5/include
 LIB_DIRS  := /usr/local/qt5/lib
 
 INCLUDE   := $(addprefix -I,$(INC_DIRS))
 CXXFLAGS  := -Wall -Wextra -fPIC
 
 LDFLAGS   := $(addprefix -L,$(LIB_DIRS))
-LDLIBS   	  := -lQt5Core
+LDLIBS    := -lQt5Core
 
 
 all: build $(APP_DIR)/$(TARGET)
